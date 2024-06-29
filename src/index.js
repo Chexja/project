@@ -7,7 +7,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Basic from "./layout/basic";
-
+import Single from "./layout/single";
 
 const feather = require('feather-icons');
 setTimeout(() => {
@@ -30,12 +30,11 @@ const router = createBrowserRouter([
 
       {
         path: "/detalle/:slug",
-
+        element: <Single />,
       },
     ],
   },
 ]);
-
 
 
 const root = createRoot(document.getElementById("root"));

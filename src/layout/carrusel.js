@@ -17,22 +17,22 @@ const Carrusel = () => {
   };
 
   const renderCarouselItems = () => {
-    const pages = Math.ceil(playas.length / itemsPerPage);
+    const pages = Math.ceil(procesador.length / itemsPerPage);
     const carouselItems = [];
 
     for (let i = 0; i < pages; i++) {
       const startIndex = i * itemsPerPage;
-      const slicedPlayas = playas.slice(startIndex, startIndex + itemsPerPage);
+      const slicedProcesador = procesador.slice(startIndex, startIndex + itemsPerPage);
 
       carouselItems.push(
         <Carousel.Item key={i}>
           <div className="row">
-            {slicedPlayas.map((item, subIndex) => (
+            {slicedProcesador.map((item, subIndex) => (
               <div key={startIndex + subIndex} className="col">
                 <img
                   className='w-100 h-100 dark-image'
                   src={item.picture}
-                  alt={`Playa ${item.slug}`}
+                  alt={`Procesador ${item.slug}`}
                   onClick={(e) => {
                     e.preventDefault();
                     handleClick(item.slug);
@@ -59,25 +59,34 @@ const Carrusel = () => {
 
 export default Carrusel;
 
-const playas = [
+const procesador = [
   {
-    slug: 'playa-1',
-    picture: 'https://static.vecteezy.com/system/resources/thumbnails/035/095/662/small_2x/ai-generated-copy-space-tropical-beach-landscape-ai-generative-photo.jpg'
-  },
-  {
-    slug: 'playa-2',
-    picture: 'https://i.pinimg.com/474x/17/f0/13/17f013312dfa35c8e242602bb7835ecc.jpg'
-  },
-  {
-    slug: 'playa-3',
-    picture: 'https://static.vecteezy.com/system/resources/thumbnails/038/252/827/small_2x/ai-generated-sunny-tropical-beach-sea-shells-photo.jpg'
-  },
-  {
-    slug: 'playa-4',
-    picture: 'https://static.vecteezy.com/system/resources/thumbnails/038/252/827/small_2x/ai-generated-sunny-tropical-beach-sea-shells-photo.jpg'
-  },
-  {
-    slug: 'playa-5',
-    picture: 'https://static.vecteezy.com/system/resources/thumbnails/038/252/827/small_2x/ai-generated-sunny-tropical-beach-sea-shells-photo.jpg'
-  }
+        
+    "slug": "procesador-1",
+    "picture": "https://keagamerstore.com/wp-content/uploads/2023/03/1-29.png"
+},
+{
+    
+    "slug": "procesador-2",
+    "picture": "https://techcartindia.com/wp-content/uploads/2023/12/1-12.png"
+},
+{
+    
+    "slug": "procesador-3",
+    "picture": "https://electronicstore.com.pe/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/4/14532534.png"
+},
+{
+    
+    "slug": "procesador-4",
+    "picture": "https://pcexpress.pe/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/k/k/kk3enbbvjc2ublbq5jtgdj.png"
+},
+{
+    
+    "slug": "procesador-5",
+    "picture": "https://i0.wp.com/infotron.pe/wp-content/uploads/2023/12/procesador-intel-core-i9-14900kf-320ghz600ghz-36mb-24-core-lga1700-pnbx8071514900kf-removebg-preview.png?fit=500%2C500&ssl=1"
+},
+{
+    "slug": "procesador-6",
+    "picture": "https://dojiw2m9tvv09.cloudfront.net/71228/product/19168.png"
+}
 ];
