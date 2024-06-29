@@ -4,6 +4,7 @@ import Header from "./header";
 import Footer from "./footer";
 
 
+
 const Basic = () => {
     return (
         
@@ -12,6 +13,7 @@ const Basic = () => {
                 <div >
                     <div >
                         <Outlet></Outlet>
+                        
                     </div>
                 </div>
                 
