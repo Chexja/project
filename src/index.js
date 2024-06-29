@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Basic from "./layout/basic";
 import Single from "./layout/single";
+import PreguntFrec from './layout/preguntfrec';
 
 const feather = require('feather-icons');
 setTimeout(() => {
@@ -27,20 +28,20 @@ const router = createBrowserRouter([
           </div>
         </>
       },
-
       {
         path: "/detalle/:slug",
         element: <Single />,
       },
+      {
+        path: "/preguntas",
+        element: <PreguntFrec />, // Añade la ruta para Preguntas
+      },
+      
     ],
   },
 ]);
 
-
 const root = createRoot(document.getElementById("root"));
 root.render(
   <RouterProvider router={router} />
-
 );
-
-

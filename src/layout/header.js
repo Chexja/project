@@ -25,8 +25,13 @@ const Header = () => {
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link active text-white" to="/auspicios">
+                                <Link className="nav-link active text-white" to="/preguntas">
                                     <i data-feather="globe"></i> Preguntas Frecuentes
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link active text-white" to="/contactanos">
+                                    <i data-feather="globe"></i> Contáctanos
                                 </Link>
                             </li>
                         </ul>
