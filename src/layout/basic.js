@@ -13,8 +13,7 @@ const Basic = () => {
                 <div >
                     <div >
                         <Outlet></Outlet>
-                        
-                    </div>
+                     </div>
                 </div>
                 
                 <div> <Footer /> </div>
