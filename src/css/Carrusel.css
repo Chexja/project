@@ -1,23 +1,20 @@
 .carousel {
-    max-width: 400px; /* Ajusta el ancho máximo según tus necesidades */
+    max-width: 600px; /* Ajusta el ancho máximo según tus necesidades */
     margin: auto; /* Centra el carrusel */
 }
-.image-grid {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
+
+.item-name {
+    font-family: 'Arial', sans-serif; /* Cambia 'Arial' por la fuente que desees */
+    font-size: 10px; /* Tamaño de la fuente del nombre */
+    font-weight: bold; /* Opcional: Peso de la fuente */
 }
 
 .image-container {
-    flex: 0 0 calc(5% - 2px); /* Ajustar el tamaño de las imágenes según el número de imágenes por fila */
-    margin-right: 5px;
-    overflow: hidden;
     position: relative;
+    overflow: hidden;
+    text-align: center;
     cursor: pointer;
-}
-
-.image-container:last-child {
-    margin-right: 0;
+    margin-bottom: 10px; /* Espacio entre imágenes */
 }
 
 .image-container img {
@@ -29,28 +26,33 @@
 .image-container:hover img {
     transform: scale(1.1);
 }
-
-.carrusel-container .carousel-control-next-icon,
-.carrusel-container .carousel-control-prev-icon {
-    background-color: black;
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black; /* Cambia el color de fondo de las flechas */
 }
 
-.carrusel-container .carousel-control-prev,
-.carrusel-container .carousel-control-next {
-    width: 5%;
+/* Barra de indicadores */
+.carousel-indicators {
+  bottom: 10px; /* Ajusta la posición de la barra de indicadores */
 }
 
-.carrusel-container .carousel-indicators {
-    display: none;
+/* Estilo específico para los puntos indicadores */
+.carousel-indicators li {
+  background-color: black; /* Cambia el color de los puntos indicadores */
 }
 
-.dark-image {
-    width: 100%;
-    height: auto; /* Mantén la proporción original */
-    object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
-  }
-  
-.carousel-item img {
-    max-width: 100%; /* Ajusta el ancho máximo de la imagen */
-    height: auto; /* Permite que la altura se ajuste automáticamente */
+/* Estilo para el punto indicador activo */
+.carousel-indicators .active {
+  background-color: black; /* Cambia el color del punto indicador activo */
+}
+
+.caption {
+    position: absolute;
+    bottom: -30px; /* Ajusta la distancia desde abajo según necesites */
+    left: 0;
+    right: 0;
+    color: black; /* Color del texto */
+    padding: 10px;
+    text-align: center; /* Centra el texto */
+    font-size: 6px; /* Tamaño de la fuente */
 }

@@ -26,18 +26,24 @@ const Carrusel = () => {
 
       carouselItems.push(
         <Carousel.Item key={i}>
+          
           <div className="row">
             {slicedProcesador.map((item, subIndex) => (
               <div key={startIndex + subIndex} className="col">
-                <img
-                  className='w-100 h-100 dark-image'
-                  src={item.picture}
-                  alt={`Procesador ${item.slug}`}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleClick(item.slug);
-                  }}
-                />
+                <div className="image-container">
+                  <img
+                    className='w-100 h-100 dark-image'
+                    src={item.picture}
+                    alt={`Procesador ${item.slug}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleClick(item.slug);
+                    }}
+                  />
+                  <div className="caption">
+                    <p className="item-name">{` ${item.name}`}</p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
@@ -61,32 +67,39 @@ export default Carrusel;
 
 const procesador = [
   {
-        
     "slug": "procesador-1",
-    "picture": "https://keagamerstore.com/wp-content/uploads/2023/03/1-29.png"
-},
-{
+    "picture": "https://keagamerstore.com/wp-content/uploads/2023/03/1-29.png",
+    "name": "Intel Core i5",
     
+  },
+  {
     "slug": "procesador-2",
-    "picture": "https://techcartindia.com/wp-content/uploads/2023/12/1-12.png"
-},
-{
+    "picture": "https://techcartindia.com/wp-content/uploads/2023/12/1-12.png",
+    "name": "AMD Ryzen 7",
     
+  },
+  {
     "slug": "procesador-3",
-    "picture": "https://electronicstore.com.pe/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/4/14532534.png"
-},
-{
+    "picture": "https://electronicstore.com.pe/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/4/14532534.png",
+    "name": "Intel Core i9",
     
+  },
+  {
     "slug": "procesador-4",
-    "picture": "https://pcexpress.pe/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/k/k/kk3enbbvjc2ublbq5jtgdj.png"
-},
-{
+    "picture": "https://pcexpress.pe/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/k/k/kk3enbbvjc2ublbq5jtgdj.png",
+    "name": "AMD Ryzen 5",
     
+  },
+  {
     "slug": "procesador-5",
-    "picture": "https://i0.wp.com/infotron.pe/wp-content/uploads/2023/12/procesador-intel-core-i9-14900kf-320ghz600ghz-36mb-24-core-lga1700-pnbx8071514900kf-removebg-preview.png?fit=500%2C500&ssl=1"
-},
-{
+    "picture": "https://i0.wp.com/infotron.pe/wp-content/uploads/2023/12/procesador-intel-core-i9-14900kf-320ghz600ghz-36mb-24-core-lga1700-pnbx8071514900kf-removebg-preview.png?fit=500%2C500&ssl=1",
+    "name": "Intel Core i7",
+    
+  },
+  {
     "slug": "procesador-6",
-    "picture": "https://dojiw2m9tvv09.cloudfront.net/71228/product/19168.png"
-}
+    "picture": "https://dojiw2m9tvv09.cloudfront.net/71228/product/19168.png",
+    "name": "AMD Ryzen 9",
+    
+  }
 ];
