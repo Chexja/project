@@ -1,58 +1,111 @@
 .carousel {
-    max-width: 600px; /* Ajusta el ancho máximo según tus necesidades */
-    margin: auto; /* Centra el carrusel */
+  max-width: 600px; /* Ajusta el ancho máximo según tus necesidades */
+  margin: auto; /* Centra el carrusel */
 }
 
-.item-name {
-    font-family: 'Arial', sans-serif; /* Cambia 'Arial' por la fuente que desees */
-    font-size: 10px; /* Tamaño de la fuente del nombre */
-    font-weight: bold; /* Opcional: Peso de la fuente */
+.carrusel-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .image-container {
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    cursor: pointer;
-    margin-bottom: 10px; /* Espacio entre imágenes */
+  position: relative;
+  padding: 10px;
 }
 
-.image-container img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
+.w-100 {
+  width: 100%;
 }
 
-.image-container:hover img {
-    transform: scale(1.1);
-}
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: black; /* Cambia el color de fondo de las flechas */
+.h-100 {
+  height: auto;
 }
 
-/* Barra de indicadores */
-.carousel-indicators {
-  bottom: 10px; /* Ajusta la posición de la barra de indicadores */
+.dark-image {
+  filter: brightness(0.8);
+  transition: transform 0.3s ease;
 }
 
-/* Estilo específico para los puntos indicadores */
-.carousel-indicators li {
-  background-color: black; /* Cambia el color de los puntos indicadores */
-}
-
-/* Estilo para el punto indicador activo */
-.carousel-indicators .active {
-  background-color: black; /* Cambia el color del punto indicador activo */
+.dark-image:hover {
+  transform: scale(1.05);
 }
 
 .caption {
-    position: absolute;
-    bottom: -30px; /* Ajusta la distancia desde abajo según necesites */
-    left: 0;
-    right: 0;
-    color: black; /* Color del texto */
-    padding: 10px;
-    text-align: center; /* Centra el texto */
-    font-size: 6px; /* Tamaño de la fuente */
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: blackwhite;
+  text-align: center; /* Centra el texto */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.caption {
+  position: absolute;
+  bottom: -25px; /* Ajusta la distancia desde abajo según necesites */
+  left: 0;
+  right: 0;
+  color: black; /* Color del texto */
+  padding: 10px;
+  text-align: center; /* Centra el texto */
+  font-size: 10px; /* Tamaño de la fuente */
+}
+
+
+.item-name {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 10px;
+}
+
+/* Styles for the Single component */
+.single-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.single-image {
+  flex: 0 0 50%;
+  text-align: center;
+}
+
+.single-image img {
+  width: 300px;
+  height: auto;
+}
+
+.single-details {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.single-details h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.single-details p {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.single-details .price {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.carousel-container .image-container img {
+  transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.carousel-container .image-container img:hover {
+  transform: scale(1.1);
+  border: 2px solid #000; /* Adjust the border color and width as needed */
 }

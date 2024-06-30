@@ -6,7 +6,7 @@ import '/workspaces/project/src/css/Carrusel.css';
 const Carrusel = () => {
   const navigate = useNavigate();
   const [index, setIndex] = useState(0);
-  const itemsPerPage = 3;
+  const itemsPerPage = 3; // Número de imágenes por página
 
   const handleClick = (slug) => {
     navigate("/detalle/" + slug);
@@ -26,7 +26,6 @@ const Carrusel = () => {
 
       carouselItems.push(
         <Carousel.Item key={i}>
-          
           <div className="row">
             {slicedProcesador.map((item, subIndex) => (
               <div key={startIndex + subIndex} className="col">
@@ -69,68 +68,66 @@ const procesador = [
   {
     "slug": "procesador-1",
     "picture": "https://keagamerstore.com/wp-content/uploads/2023/03/1-29.png",
-    "name": "Intel Core i5"
+    "name": "Intel Core i5",
   },
-  {
+    {
     "slug": "procesador-2",
     "picture": "https://techcartindia.com/wp-content/uploads/2023/12/1-12.png",
-    "name": "AMD Ryzen 7"
+    "name": "Intel Core i3",
+  },
+    {
+      "slug": "procesador-3",
+      "picture": "https://electronicstore.com.pe/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/4/14532534.png",
+      "name": "Intel Core i7",
+    },
+    {
+      "slug": "procesador-4",
+      "picture": "https://pcexpress.pe/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/k/k/kk3enbbvjc2ublbq5jtgdj.png",
+      "name": "AMD Ryzen 7",
+    },
+    {
+      "slug": "procesador-5",
+      "picture": "https://i0.wp.com/infotron.pe/wp-content/uploads/2023/12/procesador-intel-core-i9-14900kf-320ghz600ghz-36mb-24-core-lga1700-pnbx8071514900kf-removebg-preview.png?fit=500%2C500&ssl=1",
+      "name": "Intel Core i9",      
+    },
+    {
+      "slug": "procesador-6",
+      "picture": "https://dojiw2m9tvv09.cloudfront.net/71228/product/19168.png",
+      "name": "AMD Ryzen 9",
+    },
+  {
+        
+    "slug": "TarjetaGrafica-1",
+    "picture": "https://pcexpress.pe/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/0/1024_1__4.png",
+    "name":"RTX 4060",
   },
   {
-    "slug": "procesador-3",
-    "picture": "https://electronicstore.com.pe/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/4/14532534.png",
-    "name": "Intel Core i9"
-  },
-  {
-    "slug": "procesador-4",
-    "picture": "https://pcexpress.pe/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/k/k/kk3enbbvjc2ublbq5jtgdj.png",
-    "name": "AMD Ryzen 5"
-  },
-  {
-    "slug": "procesador-5",
-    "picture": "https://i0.wp.com/infotron.pe/wp-content/uploads/2023/12/procesador-intel-core-i9-14900kf-320ghz600ghz-36mb-24-core-lga1700-pnbx8071514900kf-removebg-preview.png?fit=500%2C500&ssl=1",
-    "name": "Intel Core i7"
     
+    "slug": "TarjetaGrafica-2",
+    "picture": "https://pcexpress.pe/media/catalog/product/cache/1/image/470x470/9df78eab33525d08d6e5fb8d27136e95/g/e/geforce_rtx_4070_eagle_oc_12g-02.png",
+    "name":"RTX 4070",
   },
   {
-    "slug": "procesador-6",
-    "picture": "https://dojiw2m9tvv09.cloudfront.net/71228/product/19168.png",
-    "name": "AMD Ryzen 9"
     
+    "slug": "TarjetaGrafica-3",
+    "picture": "https://pcexpress.pe/media/catalog/product/cache/1/image/470x470/9df78eab33525d08d6e5fb8d27136e95/1/0/1024_1_2_1.png",
+    "name":"RTX 4070",
   },
-{
-      
-  "slug": "TarjetaGrafica-1",
-  "picture": "https://pcexpress.pe/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/0/1024_1__4.png",
-  "name":"RTX 3050"
-},
-{
-  
-  "slug": "TarjetaGrafica-2",
-  "picture": "https://pcexpress.pe/media/catalog/product/cache/1/image/470x470/9df78eab33525d08d6e5fb8d27136e95/g/e/geforce_rtx_4070_eagle_oc_12g-02.png",
-  "name":"RTX 4070"
-},
-{
-  
-  "slug": "TarjetaGrafica-3",
-  "picture": "https://pcexpress.pe/media/catalog/product/cache/1/image/470x470/9df78eab33525d08d6e5fb8d27136e95/1/0/1024_1_2_1.png",
-  "name":"RTX 4070"
-},
-{
-  
-  "slug": "TarjetaGrafica-4",
-  "picture": "https://pcexpress.pe/media/catalog/product/cache/1/image/470x470/9df78eab33525d08d6e5fb8d27136e95/1/0/1024_4__3.png",
-  "name":"RTX 4070"    
-},
-{
-  
-  "slug": "TarjetaGrafica-5",
-  "picture": "https://pcexpress.pe/media/catalog/product/cache/1/image/470x470/9df78eab33525d08d6e5fb8d27136e95/d/e/descarga_1.png",
-  "name":"RTX 3050"
-},
-{
-  "slug": "TarjetaGrafica-6",
-  "picture": "https://pcexpress.pe/media/catalog/product/cache/1/image/470x470/9df78eab33525d08d6e5fb8d27136e95/1/0/1024_4.png",
-  "name":"RTX 3060"
-}
+  {
+    
+    "slug": "TarjetaGrafica-4",
+    "picture": "https://pcexpress.pe/media/catalog/product/cache/1/image/470x470/9df78eab33525d08d6e5fb8d27136e95/1/0/1024_4__3.png",
+    "name":"RTX 4070",  
+  },
+  {
+    
+    "slug": "TarjetaGrafica-5",
+    "picture": "https://pcexpress.pe/media/catalog/product/cache/1/image/470x470/9df78eab33525d08d6e5fb8d27136e95/d/e/descarga_1.png",
+    "name":"RTX 3050",
+  },
+  {
+    "slug": "TarjetaGrafica-6",
+    "picture": "https://pcexpress.pe/media/catalog/product/cache/1/image/470x470/9df78eab33525d08d6e5fb8d27136e95/1/0/1024_4.png",
+    "name":"RTX 3060",
+  }
 ];

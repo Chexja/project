@@ -1,69 +1,94 @@
 [
+  {
+    "slug": "procesador-1",
+    "picture": "https://keagamerstore.com/wp-content/uploads/2023/03/1-29.png",
+    "name": "Intel Core i5",
+    "price": "S/. 1 026",
+    "characteristics": "VISTA RÁPIDA:\nMARCA: INTEL\nSKU: CPILI513400F\nCODIGO: 408045\nP/N: BX8071513400F"
+  },
     {
-      "slug": "procesador-1",
-      "picture": "https://keagamerstore.com/wp-content/uploads/2023/03/1-29.png",
-      "name": "Intel Core i5"
-    },
-    {
-      "slug": "procesador-2",
-      "picture": "https://techcartindia.com/wp-content/uploads/2023/12/1-12.png",
-      "name": "AMD Ryzen 7"
-    },
+    "slug": "procesador-2",
+    "picture": "https://techcartindia.com/wp-content/uploads/2023/12/1-12.png",
+    "name": "Intel Core i3",
+    "price": "S/. 700",
+    "characteristics": "VISTA RÁPIDA:\nMARCA: INTEL\nSKU: CJI2406012JB\nCODIGO: 248012\nP/N: BX2004513400J"
+  },
     {
       "slug": "procesador-3",
       "picture": "https://electronicstore.com.pe/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/4/14532534.png",
-      "name": "Intel Core i9"
+      "name": "Intel Core i7",
+      "price": "S/. 1 846",
+      "characteristics": "VISTA RÁPIDA:\nMARCA: INTEL\nSKU: CPILI713700F\nCODIGO: 408047\nP/N: BX8071513700F"
     },
     {
       "slug": "procesador-4",
       "picture": "https://pcexpress.pe/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/k/k/kk3enbbvjc2ublbq5jtgdj.png",
-      "name": "AMD Ryzen 5"
+      "name": "AMD Ryzen 7",
+      "price": "S/. 2 299",
+      "characteristics": "VISTA RÁPIDA:\nMARCA: AMD\nSKU: 100-100000063WOF\nCODIGO: 355699\nP/N: CPAM4R75800X"
     },
     {
       "slug": "procesador-5",
       "picture": "https://i0.wp.com/infotron.pe/wp-content/uploads/2023/12/procesador-intel-core-i9-14900kf-320ghz600ghz-36mb-24-core-lga1700-pnbx8071514900kf-removebg-preview.png?fit=500%2C500&ssl=1",
-      "name": "Intel Core i7"
+      "name": "Intel Core i9",
+      "price": "S/. 2 299",
+      "characteristics": "VISTA RÁPIDA:\nMARCA: INTEL\nSKU: I9-14900045YF\nCODIGO: 4535674\nP/N: Bx8071514900"
       
     },
     {
       "slug": "procesador-6",
       "picture": "https://dojiw2m9tvv09.cloudfront.net/71228/product/19168.png",
-      "name": "AMD Ryzen 9"
+      "name": "AMD Ryzen 9",
+      "price": "S/. 3 549",
+      "characteristics": "VISTA RÁPIDA:\nMARCA: AMD\nSKU: CPAM5R97900X\nCODIGO: 401074\nP/N: 100-100000589WOF"
       
     },
   {
         
     "slug": "TarjetaGrafica-1",
     "picture": "https://pcexpress.pe/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/1/0/1024_1__4.png",
-    "namee":"RTX 3050"
+    "name":"RTX 4060",
+    "price": "S/. 1 988",
+    "characteristics": "VISTA RÁPIDA:\nMARCA: MSI\nSKU: RTX4060TIMSI\nCODIGO: 40934266\nP/N: VENTUS2XBLACK"
   },
   {
     
     "slug": "TarjetaGrafica-2",
     "picture": "https://pcexpress.pe/media/catalog/product/cache/1/image/470x470/9df78eab33525d08d6e5fb8d27136e95/g/e/geforce_rtx_4070_eagle_oc_12g-02.png",
-    "namee":"RTX 4070"
+    "name":"RTX 4070",
+    "price": "S/. 3 300",
+    "characteristics": "VISTA RÁPIDA:\nMARCA: GIGABYTE\nSKU: GV-N4070EAGLE OC-12GD\nCODIGO: 415009\nP/N: VD12GBRTX4070EO"
   },
   {
     
     "slug": "TarjetaGrafica-3",
     "picture": "https://pcexpress.pe/media/catalog/product/cache/1/image/470x470/9df78eab33525d08d6e5fb8d27136e95/1/0/1024_1_2_1.png",
-    "namee":"RTX 4070"
+    "name":"RTX 4070",
+    "price": "S/. 5 500",
+    "characteristics": "VISTA RÁPIDA:\nMARCA: MSI\nSKU: MS7873TA\nCODIGO: 12015\nP/N: 912-V513-001"
   },
   {
     
     "slug": "TarjetaGrafica-4",
     "picture": "https://pcexpress.pe/media/catalog/product/cache/1/image/470x470/9df78eab33525d08d6e5fb8d27136e95/1/0/1024_4__3.png",
-    "namee":"RTX 4070"    
+    "name":"RTX 4070",
+    "price": "S/. 2 999",
+    "characteristics": "VISTA RÁPIDA:\nMARCA: MSI\nSKU: MS7873TA\nCODIGO: 12015\nP/N:  912-V513-001"   
   },
   {
     
     "slug": "TarjetaGrafica-5",
     "picture": "https://pcexpress.pe/media/catalog/product/cache/1/image/470x470/9df78eab33525d08d6e5fb8d27136e95/d/e/descarga_1.png",
-    "namee":"RTX 3050"
+    "name":"RTX 3050",
+    "price": "S/. 1 610",
+    "characteristics": "VISTA RÁPIDA:\nMARCA: ASUS\nSKU: GDDR62043\nCODIGO: 342345\nP/N: JB8071513400Y"
   },
   {
     "slug": "TarjetaGrafica-6",
     "picture": "https://pcexpress.pe/media/catalog/product/cache/1/image/470x470/9df78eab33525d08d6e5fb8d27136e95/1/0/1024_4.png",
-    "namee":"RTX 3060"
+    "name":"RTX 3060",
+    "price": "S/. 3 000",
+    "characteristics": "VISTA RÁPIDA:\nMARCA: MSI\nSKU: VD8GMSRTX3060VX\nCODIGO: 371882\nP/N: RTX 3060 VENTUS 2X 8G OC"
   }
   ]
+  
