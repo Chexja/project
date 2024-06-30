@@ -10,7 +10,11 @@ const App = () => {
         <div>
             <Search />
             <TopSelection />
+            <br />
+            <center><h2>Procesadores y TarjetaGrafica</h2></center>
+            <br />
             <Carrusel/>
+            
         </div>
     );
 };
