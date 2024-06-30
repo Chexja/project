@@ -1,19 +1,117 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Importación de Bootstrap -->
-     <link
-     rel="stylesheet"
-     href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-     integrity="sha384-M2lXWlKIWuPOfD8RzD1HDShxz4cD+O/3e6Io3hD9KO/vgrwTAO9BrpXnMwDoxw2c"
-     crossorigin="anonymous"
-     />
-     <title>Formulario de Pago</title>
-     <link rel="stylesheet" href="%PUBLIC_URL%/Carrito.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-M2lXWlKIWuPOfD8RzD1HDShxz4cD+O/3e6Io3hD9KO/vgrwTAO9BrpXnMwDoxw2c" crossorigin="anonymous" />
+    <title>Formulario de Pago</title>
+    <link rel="stylesheet" href="%PUBLIC_URL%/Carrito.css">
 </head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Arial', sans-serif;
+    }
+
+    body {
+        display: flex;
+        justify-content: flex-start;
+        padding: 20px;
+    }
+
+    .formulario-pago {
+        width: 30%;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+    }
+
+    h2,
+    h3 {
+        margin-bottom: 15px;
+        color: #333;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: #555;
+    }
+
+    input,
+    select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    input:invalid,
+    select:invalid {
+        border-color: red;
+    }
+
+    input:valid,
+    select:valid {
+        border-color: green;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        background-color: #28a745;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    button:hover {
+        background-color: #218838;
+    }
+
+    .name-fields {
+        display: flex;
+        gap: 10px;
+    }
+
+    .name-fields div {
+        flex: 1;
+    }
+
+    .checkbox-field {
+        display: flex;
+        align-items: center;
+    }
+
+    .checkbox-field input {
+        width: auto;
+        margin-right: 10px;
+    }
+
+    .exp-cvv-fields {
+        display: flex;
+        gap: 10px;
+    }
+
+    .exp-cvv-fields div {
+        flex: 1;
+    }
+</style>
+
+
 <body>
+
     <aside class="formulario-pago">
         <h2>Pago</h2>
         <form id="paymentForm" action="#" method="post">
@@ -36,43 +134,120 @@
                     <label for="ofertas">Enviar novedades y ofertas por correo electrónico</label>
                 </div>
             </section>
-            
+
             <section class="direccion-envio">
                 <h3>Dirección de envío</h3>
                 <label for="pais">País</label>
                 <select id="pais" name="pais" required>
-                    <!-- Opciones de países se generarán dinámicamente -->
+
                 </select>
                 <label for="direccion">Dirección</label>
                 <input type="text" id="direccion" name="direccion" required>
                 <label for="ciudad">Ciudad</label>
                 <input type="text" id="ciudad" name="ciudad" required>
                 <label for="codigo-postal">Código Postal</label>
-                <input type="text" id="codigo-postal" name="codigo-postal" pattern="[0-9]{5}" title="Debe contener 5 dígitos numéricos" required>
+                <input type="text" id="codigo-postal" name="codigo-postal" pattern="[0-9]{5}"
+                    title="Debe contener 5 dígitos numéricos" required>
             </section>
-            
+
             <section class="metodos-pago">
                 <h3>Métodos de pago</h3>
                 <label for="tarjeta">Número de tarjeta</label>
-                <input type="text" id="tarjeta" name="tarjeta" pattern="[0-9]{16}" title="Debe contener 16 dígitos numéricos" required>
+                <input type="text" id="tarjeta" name="tarjeta" pattern="[0-9]{16}"
+                    title="Debe contener 16 dígitos numéricos" required>
                 <div class="exp-cvv-fields">
                     <div>
                         <label for="fecha-expiracion">Fecha de expiración</label>
-                        <input type="text" id="fecha-expiracion" name="fecha-expiracion" pattern="(0[1-9]|1[0-2])\/?([0-9]{4}|[0-9]{2})" title="Debe estar en el formato MM/AA o MM/AAAA" required>
+                        <input type="text" id="fecha-expiracion" name="fecha-expiracion"
+                            pattern="(0[1-9]|1[0-2])\/?([0-9]{4}|[0-9]{2})"
+                            title="Debe estar en el formato MM/AA o MM/AAAA" required>
                     </div>
                     <div>
                         <label for="cvv">CVV</label>
-                        <input type="text" id="cvv" name="cvv" pattern="[0-9]{3}" title="Debe contener 3 dígitos numéricos" required>
+                        <input type="text" id="cvv" name="cvv" pattern="[0-9]{3}"
+                            title="Debe contener 3 dígitos numéricos" required>
                     </div>
                 </div>
                 <label for="nombre-titular">Nombre del titular</label>
                 <input type="text" id="nombre-titular" name="nombre-titular" required>
             </section>
-            
-            <button type="submit">Pagar</button>
+
+
+            <button id="boton-pagar">Pagar</button>
         </form>
     </aside>
 
-    <script src="/src/Carrito.js"></script>
+    <script>
+
+        document.getElementById('boton-pagar').addEventListener('click', function () {
+            // Mostrar mensaje de agradecimiento
+            alert('¡Gracias por su compra!');
+
+            // Redirigir a la página de inicio
+            window.location.href = 'index.html'; 
+        });
+
+        // Códigos telefónicos por país
+        const countryPhoneCodes = {
+            "Peru": { "code": "+51", "pattern": "[0-9]{9}", "title": "Debe contener 9 dígitos numéricos" },
+            "USA": { "code": "+1", "pattern": "[0-9]{10}", "title": "Debe contener 10 dígitos numéricos" },
+            "UK": { "code": "+44", "pattern": "[0-9]{10}", "title": "Debe contener 10 dígitos numéricos" },
+            "Argentina": { "code": "+54", "pattern": "[0-9]{10}", "title": "Debe contener 10 dígitos numéricos" },
+            "Brazil": { "code": "+55", "pattern": "[0-9]{11}", "title": "Debe contener 11 dígitos numéricos" },
+            "Canada": { "code": "+1", "pattern": "[0-9]{10}", "title": "Debe contener 10 dígitos numéricos" },
+            "Chile": { "code": "+56", "pattern": "[0-9]{9}", "title": "Debe contener 9 dígitos numéricos" },
+            "China": { "code": "+86", "pattern": "[0-9]{11}", "title": "Debe contener 11 dígitos numéricos" },
+            "France": { "code": "+33", "pattern": "[0-9]{9}", "title": "Debe contener 9 dígitos numéricos" },
+            "Germany": { "code": "+49", "pattern": "[0-9]{10}", "title": "Debe contener 10 dígitos numéricos" },
+            "India": { "code": "+91", "pattern": "[0-9]{10}", "title": "Debe contener 10 dígitos numéricos" },
+            "Italy": { "code": "+39", "pattern": "[0-9]{10}", "title": "Debe contener 10 dígitos numéricos" },
+            "Japan": { "code": "+81", "pattern": "[0-9]{10}", "title": "Debe contener 10 dígitos numéricos" },
+            "Mexico": { "code": "+52", "pattern": "[0-9]{10}", "title": "Debe contener 10 dígitos numéricos" },
+            "Spain": { "code": "+34", "pattern": "[0-9]{9}", "title": "Debe contener 9 dígitos numéricos" },
+            "Australia": { "code": "+61", "pattern": "[0-9]{9}", "title": "Debe contener 9 dígitos numéricos" },
+            "Colombia": { "code": "+57", "pattern": "[0-9]{10}", "title": "Debe contener 10 dígitos numéricos" }
+        };
+
+        // Función para llenar el selector de países
+        function populateCountrySelect() {
+            const select = document.getElementById('pais');
+            for (const country in countryPhoneCodes) {
+                const option = document.createElement('option');
+                option.value = country;
+                option.text = country;
+                select.appendChild(option);
+            }
+        }
+
+        // Función para actualizar la validación del número de teléfono
+        function updatePhoneValidation() {
+            const select = document.getElementById('pais');
+            const telefono = document.getElementById('telefono');
+            const selectedCountry = select.value;
+
+            if (countryPhoneCodes[selectedCountry]) {
+                const { pattern, title } = countryPhoneCodes[selectedCountry];
+                telefono.pattern = pattern;
+                telefono.title = title;
+            }
+        }
+
+        // Llenar el selector de países al cargar la página
+        document.addEventListener('DOMContentLoaded', () => {
+            populateCountrySelect();
+            document.getElementById('pais').addEventListener('change', updatePhoneValidation);
+
+            // Agregar la lógica de validación de formulario
+            document.getElementById('paymentForm').addEventListener('submit', function (event) {
+                let form = event.target;
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    </script>
 </body>
+
 </html>
