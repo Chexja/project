@@ -88,7 +88,7 @@ const App = () => {
       return selectedGraphicsCard.performance + selectedProcessor.performance;
     }
     return 0;
-  };  
+  };
 
   const renderProducts = (products, startIndex, category) => {
     return products.slice(startIndex, startIndex + 3).map((product) => (
@@ -195,18 +195,18 @@ const App = () => {
                     </div>
                   )}
                 </div>
-                <Button id="buy-button" onClick={handleBuyClick}><FaShoppingCart /> Comprar</Button>
+               <Button href="/Carrito" id="buy-button" onClick={handleBuyClick} variant="primary"><FaShoppingCart /> Comprar</Button>
                 {selectedGraphicsCard && selectedProcessor && (
-                <div id="performance-chart">
-                  <GaussianBellCurve mean={50} stdDev={15} totalScore={getTotalScore()} />
-                  <div className="selected-item">
-                    <h4>Rendimiento estimado</h4>
-                    <p>{getTotalScore()}%</p>
+                  <div id="performance-chart">
+                    <GaussianBellCurve mean={50} stdDev={15} totalScore={getTotalScore()} />
+                    <div className="selected-item">
+                      <h4>Rendimiento estimado</h4>
+                      <p>{getTotalScore()}%</p>
+                    </div>
                   </div>
-                </div>
-              )}
-            </Col>
-          </Row>
+                )}
+              </Col>
+            </Row>
           </Col>
         </Row>
       </Container>

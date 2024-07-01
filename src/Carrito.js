@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-
+import '/workspaces/project/src/Carrito.css'
 const Carrito = () => {
     useEffect(() => {
         // Códigos telefónicos por país
