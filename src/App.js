@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Button, Form } from 'react-bootstrap';
 import { FaCheck, FaChevronLeft, FaChevronRight, FaShoppingCart } from 'react-icons/fa';
-import { BrowserRouter as Router, Route, Routes, Link, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Header from './Header';
 import Footer from './Footer';
 import GaussianBellCurve from './GaussianBellCurve';
+import Carrito from './Carrito';
 
 const graphicsCards = [
   { id: 1, name: 'NVIDIA GeForce RTX 3080', description: 'High-end gaming GPU with 10GB GDDR6X.', price: 4500, specialOffer: true, freeShipping: true, image: '/assets/NVIDIA GeForce RTX 3080.jpg', performance: 48 },
@@ -34,6 +35,7 @@ const App = () => {
   const [graphicsIndex, setGraphicsIndex] = useState(0);
   const [processorsIndex, setProcessorsIndex] = useState(0);
   const [searchQuery, setSearchQuery] = useState('');
+  const [showCarrito, setShowCarrito] = useState(false);
   const [filters, setFilters] = useState({
     price: [0, 5000],
     dailyDeal: false,
@@ -44,8 +46,6 @@ const App = () => {
     setGraphicsIndex(0);
     setProcessorsIndex(0);
   }, [searchQuery, filters]);
-  
-  const navigate = useNavigate();
 
   const selectProduct = (category, product) => {
     if (category === 'graphics') {
@@ -109,7 +109,7 @@ const App = () => {
   };
 
   const handleBuyClick = () => {
-    window.location.href = '/carrito.html';
+    setShowCarrito(true);
   };
 
   return (
@@ -197,16 +197,16 @@ const App = () => {
                 </div>
                 <Button id="buy-button" onClick={handleBuyClick}><FaShoppingCart /> Comprar</Button>
                 {selectedGraphicsCard && selectedProcessor && (
-                  <div id="performance-chart">
-                    <GaussianBellCurve mean={50} stdDev={15} totalScore={getTotalScore()} />
+                <div id="performance-chart">
+                  <GaussianBellCurve mean={50} stdDev={15} totalScore={getTotalScore()} />
+                  <div className="selected-item">
+                    <h4>Rendimiento estimado</h4>
+                    <p>{getTotalScore()}%</p>
                   </div>
-                )}
-              </Col>
-            </Row>
-            <div className="selected-item">
-              <h4>Rendimiento estimado</h4>
-              <p>{getTotalScore()}%</p>
-            </div>
+                </div>
+              )}
+            </Col>
+          </Row>
           </Col>
         </Row>
       </Container>
