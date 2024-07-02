@@ -3,7 +3,7 @@ import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tool
 
 const GaussianBellCurve = ({ mean, stdDev, totalScore }) => {
   const [chartData, setChartData] = useState([]);
-  const [maxY, setMaxY] = useState(1); // State to hold the maximum y value
+  const [maxY, setMaxY] = useState(1);
 
   useEffect(() => {
     const data = [];
@@ -39,11 +39,10 @@ const GaussianBellCurve = ({ mean, stdDev, totalScore }) => {
       Math.exp((-1 * Math.pow(x - mean, 2)) / (2 * Math.pow(stdDev, 2)))
     );
   }
-
-  // Calculate the new curve data based on the total score
+  
   const updatedChartData = chartData.map(point => ({
     x: point.x,
-    y: point.y * (totalScore) // Adjust the y value based on totalScore
+    y: point.y * (totalScore)
   }));
 
   return (

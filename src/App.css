@@ -1,6 +1,6 @@
 .container {
     padding: 20px;
-    display: block; /* Cambiado de flex a block para alinear verticalmente */
+    display: block;
 }
 
 .category {

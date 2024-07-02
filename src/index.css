@@ -1,4 +1,3 @@
-/* Reset básico de estilos */
 * {
     margin: 0;
     padding: 0;
@@ -6,12 +5,10 @@
     font-family: Arial, sans-serif;
 }
 
-/* Estilo general del contenedor principal */
 .container {
     padding: 20px;
 }
 
-/* Estilos para la sección del Catálogo */
 .category {
     margin-bottom: 30px;
 }
@@ -20,7 +17,6 @@ h1, h2 {
     text-align: center;
 }
 
-/* Estilos para los productos seleccionados */
 #selected-products {
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -29,13 +25,11 @@ h1, h2 {
     min-height: 100px;
 }
 
-/* Estilos para el botón "Comprar" */
 #buy-button {
     width: 100%;
     margin-top: 10px;
 }
 
-/* Estilos para el gráfico de rendimiento */
 #performance-chart {
     margin-top: 20px;
 }
