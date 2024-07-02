@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import '/workspaces/project/src/Carrito.css'
+
 const Carrito = () => {
     useEffect(() => {
-        // Códigos telefónicos por país
+        
         const countryPhoneCodes = {
             "Peru": { "code": "+51", "pattern": "[0-9]{9}", "title": "Debe contener 9 dígitos numéricos" },
             "USA": { "code": "+1", "pattern": "[0-9]{10}", "title": "Debe contener 10 dígitos numéricos" },

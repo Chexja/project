@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Button, Form } from 'react-bootstrap';
 import { FaCheck, FaChevronLeft, FaChevronRight, FaShoppingCart } from 'react-icons/fa';
-import { BrowserRouter as Router } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Header from './Header';
 import Footer from './Footer';
 import GaussianBellCurve from './GaussianBellCurve';
-import Carrito from './Carrito';
 
 const graphicsCards = [
   { id: 1, name: 'NVIDIA GeForce RTX 3080', description: 'High-end gaming GPU with 10GB GDDR6X.', price: 4500, specialOffer: true, freeShipping: true, image: '/assets/NVIDIA GeForce RTX 3080.jpg', performance: 48 },
